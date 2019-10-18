@@ -37,13 +37,18 @@ client.on('message', message =>{
 		message.channel.send(Reveal);
 		deletedMsg = [];
 	}
-	if(command.startsWith('game')) {
+	if(command.startsWith('game')){
 		client.commands.get('game').execute(message, arg, steam, discord);
 	}
 	if(command == 'char'){
-		client.commands.get('char').execute(arg[0],discord,message)
+		client.commands.get('char').execute(arg[0].toLowerCase(),discord,message)
+	}
+	if(command == 'play'){
+		client.commands.get('play').execute(message,arg.toString(),discord)
+	}
+	if(command == 'leave'){
+		client.destroy()
 	}
 });
-
 client.login(config.token);
 

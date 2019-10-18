@@ -12,7 +12,7 @@ module.exports = {
 			for(const game of games) {
 				if(game.name.toLowerCase() == arg.join(' ').toLowerCase()) {
 					nomatch = false;
-					getApp.execute(game.appid, game, steam, message, discord);
+					getApp.setGameInfo(game.appid, game, steam, message, discord);
 					break;
 				}
 				if(game.name.toLowerCase().startsWith(arg.join(' ').toLowerCase()) && list.length < 10) {
@@ -45,7 +45,7 @@ module.exports = {
 									message.channel.awaitMessages(filter, { maxMatches:1, time:15000 }).then(msg=> {
 										for(const g of list) {
 											if(g.index == msg.first().content) {
-												getApp.execute(g.appid, g, steam, message, discord);
+												getApp.setGameInfo(g.appid, g, steam, message, discord);
 											}
 										}
 									}

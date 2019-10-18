@@ -3,7 +3,7 @@ const config = require('./config.json')
 module.exports = {
 	name: 'async functions',
 	description: '',
-	execute(appid, game, steam, message, discord) {
+	setGameInfo(appid, game, steam, message, discord) {
 		const cg = { sp:false, multi:false, coop:false };
 		steam.getGameDetails(appid).then(detail=> {
 			for(const categories of detail.categories) {
@@ -30,7 +30,7 @@ module.exports = {
 	},
 	async getMembershipId(searchString){
 		const response = await axios.get(`${config.BaseURL}/User/SearchUsers`,{headers:config.header,params:{"q":searchString}})
- 		const id = response.data.Response.find(element=>{return element.uniqueName==searchString}).membershipId
+ 		const id = response.data.Response.find(element=>{return element.uniqueName}).membershipId
 	 	return id
 	},
 	async getMembershipIdData(uniqueID){
