@@ -8,7 +8,7 @@
         "start": "./run.bat"
     },
     "dependencies": {
-        "axios": "^0.19.0",
+        "axios": "^0.21.1",
         "discord.js": "^11.5.1",
         "eslint": "^6.0.1",
         "ffmpeg": "0.0.4",
