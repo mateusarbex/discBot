@@ -1,4 +1,4 @@
-Providencie sua própria chave de desenvolvedor da Steam, Discord e da Bungie
+Providencie sua própria chave de desenvolvedor da Steam, Discord e do Twitter
 
 Crie um arquivo config no root com as seguintes propriedades
 
