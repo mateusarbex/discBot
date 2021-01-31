@@ -5,7 +5,7 @@ const axios = require("axios").default;
 
 module.exports = {
   name: "download",
-  description: "Procura e executa um video no youtube",
+  description: "Procura e mandar um vídeo para baixar do twitter",
   async execute(message, arg, discord) {
     const path = Path.resolve("tweet.mp4");
     const id = arg.match(
