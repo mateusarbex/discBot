@@ -8,7 +8,7 @@
     "start": "./run.bat"
   },
   "dependencies": {
-    "@discordjs/opus": "^0.4.0",
+    "@discordjs/opus": "^0.8.0",
     "axios": "^0.21.1",
     "discord.js": "^11.6.4",
     "eslint": "^6.8.0",
